@@ -1,0 +1,38 @@
+{
+  "name": "viddamao.github.io",
+  "version": "1.0.0",
+  "description": "Vidda Portfolio",
+  "main": "index.js",
+  "dependencies": {
+    "sass": "^0.5.0",
+    "scss": "^0.2.4"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.0",
+    "gulp-jshint": "^2.0.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.3.2",
+    "gulp-uglify": "^2.0.0",
+    "jshint": "^2.9.3",
+    "webpack": "^1.13.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/viddamao/viddamao.github.io.git"
+  },
+  "keywords": [
+    "portfolio",
+    "online",
+    "resume"
+  ],
+  "author": "Vidda Wenjun Mao",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/viddamao/viddamao.github.io/issues"
+  },
+  "homepage": "https://github.com/viddamao/viddamao.github.io#readme"
+}
