@@ -6,7 +6,9 @@ var jshint = require('gulp-jshint');
 var sass = require('gulp-sass');
 var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
-var rename = require('gulp-rename');
+var rename = require('gulp-rename'),
+    livereload = require('gulp-livereload');
+
 
 // Lint Task
 gulp.task('lint', function() {
@@ -19,7 +21,8 @@ gulp.task('lint', function() {
 gulp.task('sass', function() {
     return gulp.src('scss/*.scss')
         .pipe(sass())
-        .pipe(gulp.dest('css'));
+        .pipe(gulp.dest('css'))
+        .pipe(livereload({ start: true,reloadPage   :"index.html"  }));
 });
 
 // Concatenate & Minify JS
@@ -29,11 +32,13 @@ gulp.task('scripts', function() {
         .pipe(gulp.dest('dist'))
         .pipe(rename('all.min.js'))
         .pipe(uglify())
-        .pipe(gulp.dest('js'));
+        .pipe(gulp.dest('js'))
+        .pipe(livereload({ start: true,reloadPage   :"index.html" }));
 });
 
 // Watch Files For Changes
 gulp.task('watch', function() {
+    livereload.listen();
     gulp.watch('js/*.js', ['lint', 'scripts']);
     gulp.watch('scss/*.scss', ['sass']);
 });
