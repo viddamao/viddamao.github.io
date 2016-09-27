@@ -59,7 +59,7 @@ body {
   font-weight: bold;
   font-family: cursive;
   color: white;
-  overflow-x: hidden; }
+  overflow: hidden; }
 
 hr {
   border: 0;
@@ -70,30 +70,64 @@ hr {
 #intro {
   padding-left: 5%; }
   #intro h1 {
-    font-size: 75px;
-    width: 500px;
-    margin: 15% 0 50px 0; }
+    font-size: 6em;
+    width: 600px;
+    margin: 8% 0 50px 0;
+    float: left; }
   #intro .profile_pic {
-    width: 150px;
-    height: 150px;
-    border-radius: 150px;
-    float: right; }
+    width: 200px;
+    height: 200px;
+    border-radius: 200px;
+    margin: 5% 0 50px 30px; }
   #intro hr {
+    width: 80%;
+    float: left;
     margin-top: 0;
+    margin-bottom: 0;
     background-color: #fff; }
+  @media screen and (max-width: 1000px) {
+    #intro .profile_pic {
+      width: 200px;
+      height: 200px;
+      border-radius: 200px;
+      margin: 5% auto 20px; } }
+  @media screen and (max-width: 800px) {
+    #intro .profile_pic {
+      width: 200px;
+      height: 200px;
+      border-radius: 200px;
+      margin: 0 0 20px 200px; }
+    #intro hr {
+      width: 90%; } }
   #intro li {
     cursor: pointer;
     background-color: rgba(255, 255, 255, 0.75);
     box-shadow: 20px 7px 15px rgba(140, 140, 140, 0.7);
-    padding: 20px 30px;
-    margin: 20px;
-    width: 250px;
+    padding: 22px 30px;
+    margin: 25px;
+    width: 400px;
     text-align: center;
-    font-size: 30px;
-    line-height: 40px;
+    font-size: 3em;
+    line-height: 30px;
     color: black; }
+    #intro li span {
+      display: none; }
+  #intro #nav1 {
+    margin-left: 0; }
+  #intro #nav2 {
+    margin-left: 100px; }
+  #intro #nav3 {
+    margin-left: 200px; }
+  #intro #nav4 {
+    margin-left: 300px; }
+  #intro #nav5 {
+    margin-left: 400px; }
+  #intro #nav6 {
+    margin-left: 500px; }
+  #intro li:hover span {
+    display: inline; }
   #intro .nav_bar {
-    margin-top: 5%; }
+    margin-top: 3%; }
 
 #about {
   background-color: white;
@@ -101,7 +135,7 @@ hr {
   opacity: 0.5;
   color: black;
   height: 400px;
-  margin: 25% auto 100px;
+  margin: 15% auto 100px;
   padding: 5px 40px; }
   #about h2 {
     padding-top: 20px;

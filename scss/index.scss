@@ -1,45 +1,4 @@
-/*Resetting CSS*/
-html, body, div, span, iframe,
-h1, h2, h3, h4, h5, h6, p, 
-a, em, img, dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-margin: 0;
-padding: 0;
-border: 0;
-font-size: 100%;
-font: inherit;
-vertical-align: baseline;
-}
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-display: block;
-}
-body {
-line-height: 1;
-}
-ol, ul {
-list-style: none;
-}
-blockquote, q {
-quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-content: '';
-content: none;
-}
-table {
-border-collapse: collapse;
-border-spacing: 0;
-}
-
-
+@import 'reset';
 /*Start of CSS*/
 body {
 	-webkit-user-select: none;  /* Chrome all / Safari all */
@@ -58,7 +17,7 @@ body {
 	font-weight: bold;
 	font-family: cursive;
 	color:white;
-	overflow-x:hidden;
+	overflow:hidden;
 }
 
 hr{
@@ -69,35 +28,72 @@ height:5px;
 }
 #intro{
 	padding-left: 5%;
+
 	h1{
-	font-size: 75px;
-	width:500px;
-	margin: 15% 0 50px 0;
+	font-size:6em;
+	width:600px;
+	margin: 8% 0 50px 0;
+	float: left;
 	}	
 	.profile_pic{
-	width: 150px;
-	height:150px;
-	border-radius:150px; 
-	float: right;
+	width: 200px;
+	height:200px;
+	border-radius:200px; 
+	margin: 5% 0 50px 30px;
 	}
 	hr{
-		margin-top: 0;
+	width:80%;
+	float: left;
+	margin-top: 0;
+	margin-bottom: 0;
 	background-color: #fff;
 	}
+	@media screen and (max-width: 1000px) {
+	.profile_pic{
+	width: 200px;
+	height:200px;
+	border-radius:200px; 
+	margin: 5% auto 20px;
+	}
+	}
+	@media screen and (max-width: 800px) {
+	.profile_pic{
+	width: 200px;
+	height:200px;
+	border-radius:200px; 
+	margin: 0 0 20px 200px;
+	}
+	hr{
+	width:90%;
+	}
+	}
+	
 	li{
 	cursor: pointer;
 	background-color: rgba(255,255,255,.75);
 	box-shadow:20px 7px 15px rgba(140,140,140,0.7);
-	padding:20px 30px;
-	margin: 20px;
-	width:250px;
+	padding:22px 30px;
+	margin: 25px;
+	width:400px;
 	text-align: center;
-	font-size: 30px;
-	line-height: 40px; 
+	font-size: 3em;
+	line-height: 30px; 
 	color:black;
+		span{
+		display: none;
+		}
+	}
+	$mgl: 0, 100px,200px,300px,400px,500px;
+	@for $i from 1 through length($mgl) {
+	   #nav#{$i} {
+	       margin-left: nth($mgl, $i);
+	   } 
+	}
+	li:hover span{
+	display: inline;
 	}
 	.nav_bar{
-	margin-top: 5%;
+	margin-top: 3%;
 	}
 }
 #about{
@@ -106,7 +102,7 @@ height:5px;
 	opacity: 0.5;
 	color:black; 
 	height:400px;
-	margin:25% auto 100px;
+	margin:15% auto 100px;
 	padding: 5px 40px ;
 	h2{
 	padding-top: 20px;

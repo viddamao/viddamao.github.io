@@ -17,12 +17,12 @@
         <hr>
       </div>
       <ul class="nav_bar">
-      	<li v-on:click="set_tab(1)" style="display: none;">HOME</li>
-      	<li v-on:click="set_tab(2)">ABOUT</li>
-      	<li v-on:click="set_tab(3)"style="margin-left:75px;width:300px;" >SKILLS</li>
-      	<li v-on:click="set_tab(4)"style="margin-left:150px;width:350px;">EXPERIENCES</li>
-  	<li v-on:click="set_tab(5)" style="margin-left:75px;width:300px;">PROJECTS</li>
-  	<li v-on:click="set_tab(6)">CONTACT</li>
+      	<li id="nav1" v-on:click="set_tab(1)" style="display: none;"><span>[ </span>HOME<span> ]</span></li>
+      	<li id="nav2" v-on:click="set_tab(2)"><span>[ </span>ABOUT<span> ]</span></li>
+      	<li id="nav3" v-on:click="set_tab(3)"><span>[ </span>SKILLS<span> ]</span></li>
+      	<li id="nav4" v-on:click="set_tab(4)"><span>[ </span>EXPERIENCES<span> ]</span></li>
+  	<li id="nav5" v-on:click="set_tab(5)"><span>[ </span>PROJECTS<span> ]</span></li>
+  	<li id="nav6" v-on:click="set_tab(6)"><span>[ </span>CONTACT<span> ]</span></li>
       </ul>
     </div>
     <div id="about" v-cloak v-show="tab==2">	
