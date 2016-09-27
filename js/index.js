@@ -2,7 +2,7 @@ var vm = new Vue({
     el: '#main_wrapper',
     data: {
         name: "Wenjun Mao",
-        tab: 2
+        tab: 1
     },
     methods: {
         prev_tab: function() {
