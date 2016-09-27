@@ -212,6 +212,12 @@ circle {
     font-size: 30px;
     cursor: pointer;
     margin-top: 350px; }
+  @media screen and (max-width: 600px) {
+    #skills .graph {
+      width: 500px;
+      margin-left: 0; }
+    #skills .back {
+      margin-top: 0px; } }
 
 @media screen and (max-width: 600px) {
   body {
