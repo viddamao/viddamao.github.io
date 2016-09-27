@@ -9,9 +9,27 @@
   <style> [v-cloak] { display: none; } </style>
 </head>
 <body>
-  <div>
-    <h1>Wenjun Mao</h1>
-    <div></div>
+  <div id="main_wrapper">
+    <div id="intro">
+      <h1>{{name}}</h1>
+      <ul class="nav_bar">
+      	<li>HOME</li>
+      	<li>SKILLS</li>
+      	<li>EXPERIENCES</li>
+  	<li>PROJECTS</li>
+  	<li>CONTACT</li>
+      </ul>
+    </div>
+    <div id="about">	
+      <h2>ABOUT ME</h2>
+      <hr>
+      <p>hi folks, this is typing animation using CSS</p>
+      <p>created with ♥ by 
+      <a href="https://twitter.com/@samarkandiy" title="Azik Samarkandiy">@samarkandiy</a> 
+      :)<span>|</span></p> 
+    </div>
   </div>
+<script src="js/vue.js"></script>
+ <script src="js/index.js"></script>
 </body>
 </html>

@@ -1,3 +1,46 @@
+/*Resetting CSS*/
+html, body, div, span, iframe,
+h1, h2, h3, h4, h5, h6, p, 
+a, em, img, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+margin: 0;
+padding: 0;
+border: 0;
+font-size: 100%;
+font: inherit;
+vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+display: block;
+}
+body {
+line-height: 1;
+}
+ol, ul {
+list-style: none;
+}
+blockquote, q {
+quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+content: '';
+content: none;
+}
+table {
+border-collapse: collapse;
+border-spacing: 0;
+}
+
+
+/*Start of CSS*/
 body {
 	-webkit-user-select: none;  /* Chrome all / Safari all */
 	-moz-user-select: none;     /* Firefox all */
@@ -9,14 +52,91 @@ body {
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-size: cover;
-	background-color: #464646;
+	background-color: black;
 	cursor:default;
     	font-size: 14px;
 	font-weight: bold;
-	font-family: 方正兰亭黑简体;
-}
-h1{
+	font-family: cursive;
 	color:white;
-	font-family: courier;
-	font-size: 30px;
+}
+#intro{
+	padding-left: 5%;
+	h1{
+	font-size: 75px;
+	width:500px;
+	margin-top: 15%;
+	}	
+	hr{
+	border: 0;
+	background-color: white;
+	color:white;
+	height:5px;
+	}
+	li{
+	a{	
+	color:white;
+	}
+	background-color: black;
+	opacity: 0.5;
+	padding:10px;
+	font-size: 30px; 
+	float:left;
+	}
+	.nav_bar{
+	margin-top: 5%;
+	}
+}
+#about{
+	background-color: white;
+	width:80%;
+	height:400px;
+	opacity: 0.5;
+	color:black;
+	margin: 20% auto 0;
+	padding: 5px 40px;
+	h2{
+	opacity: 1;
+	width:500px;
+	font-size: 35px;
+	}
+	p{
+	  font-family: "Courier";
+	  font-size: 20px;
+	  margin: 10px 0 0 10px;
+	  white-space: nowrap;
+	  overflow: hidden;
+	  width: 30em;
+	  animation: type 4s steps(60, end); 
+	}
+	
+	p:nth-child(2){
+	  animation: type2 16s steps(60, end);
+	}
+	
+	p a{
+	  color: lime;
+	  text-decoration: none;
+	}
+	
+	span{
+	  animation: blink 1s infinite;
+	}
+	
+	@keyframes type{ 
+	  from { width: 0; } 
+	} 
+	
+	@keyframes type2{
+	  0%{width: 0;}
+	  50%{width: 0;}
+	  100%{ width: 100; } 
+	} 
+	
+	@keyframes blink{
+	  to{opacity: .0;}
+	}
+	
+	::selection{
+	  background: black;
+	}
 }
