@@ -58,77 +58,91 @@ body {
 	font-weight: bold;
 	font-family: cursive;
 	color:white;
+	overflow-x:hidden;
+}
+
+hr{
+border: 0;
+background-color: black;
+margin-top: 20px;
+height:5px;
 }
 #intro{
 	padding-left: 5%;
 	h1{
 	font-size: 75px;
 	width:500px;
-	margin-top: 15%;
+	margin: 15% 0 50px 0;
 	}	
+	.profile_pic{
+	width: 150px;
+	height:150px;
+	border-radius:150px; 
+	float: right;
+	}
 	hr{
-	border: 0;
-	background-color: white;
-	color:white;
-	height:5px;
+		margin-top: 0;
+	background-color: #fff;
 	}
 	li{
-	a{	
-	color:white;
-	}
-	background-color: black;
-	opacity: 0.5;
-	padding:10px;
-	font-size: 30px; 
-	float:left;
+	cursor: pointer;
+	background-color: rgba(255,255,255,.75);
+	box-shadow:20px 7px 15px rgba(140,140,140,0.7);
+	padding:20px 30px;
+	margin: 20px;
+	width:250px;
+	text-align: center;
+	font-size: 30px;
+	line-height: 40px; 
+	color:black;
 	}
 	.nav_bar{
 	margin-top: 5%;
 	}
 }
 #about{
-	background-color: white;
+	background-color:  white;
 	width:80%;
-	height:400px;
 	opacity: 0.5;
-	color:black;
-	margin: 20% auto 0;
-	padding: 5px 40px;
+	color:black; 
+	height:400px;
+	margin:25% auto 100px;
+	padding: 5px 40px ;
 	h2{
-	opacity: 1;
+	padding-top: 20px;
 	width:500px;
 	font-size: 35px;
 	}
-	p{
-	  font-family: "Courier";
-	  font-size: 20px;
-	  margin: 10px 0 0 10px;
-	  white-space: nowrap;
-	  overflow: hidden;
-	  width: 30em;
-	  animation: type 4s steps(60, end); 
+	hr{
+	border: 0;
+	background-color: black;
+	margin-top: 20px;
+	height:5px;
 	}
-	
-	p:nth-child(2){
-	  animation: type2 16s steps(60, end);
+	.desc, .desc2{
+	font-size:30px;
+	white-space: nowrap;
+	overflow: hidden;
+	width: 40em;
+	margin-top: 20px;
+	line-height: 50px;
 	}
-	
-	p a{
-	  color: lime;
-	  text-decoration: none;
+	.desc{
+	animation: type 4s steps(50, end); 
 	}
-	
+	.desc2{
+	animation: type2 8s steps(50, end);
+	}
 	span{
-	  animation: blink 1s infinite;
+	animation: blink 1s infinite;
 	}
-	
 	@keyframes type{ 
 	  from { width: 0; } 
 	} 
 	
 	@keyframes type2{
 	  0%{width: 0;}
-	  50%{width: 0;}
+	  40%{width: 0;}
 	  100%{ width: 100; } 
 	} 
 	
@@ -138,5 +152,11 @@ body {
 	
 	::selection{
 	  background: black;
+	}
+	.back{
+	float: left;
+	font-size:30px;
+	cursor:pointer;
+	margin-top: 130px;
 	}
 }

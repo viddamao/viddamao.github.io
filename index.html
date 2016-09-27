@@ -8,25 +8,29 @@
   <link rel="stylesheet" href="css/index.css">
   <style> [v-cloak] { display: none; } </style>
 </head>
-<body>
+<body oncontextmenu="return false;">
   <div id="main_wrapper">
-    <div id="intro">
-      <h1>{{name}}</h1>
+    <div id="intro" v-cloak v-show="tab==1">
+      <div>
+        <h1>{{name}}</h1>
+        <img src="./assets/photo.jpg" class="profile_pic" alt="">
+        <hr>
+      </div>
       <ul class="nav_bar">
-      	<li>HOME</li>
-      	<li>SKILLS</li>
-      	<li>EXPERIENCES</li>
-  	<li>PROJECTS</li>
-  	<li>CONTACT</li>
+      	<li v-on:click="set_tab(1)" style="display: none;">HOME</li>
+      	<li v-on:click="set_tab(2)">ABOUT</li>
+      	<li v-on:click="set_tab(3)"style="margin-left:75px;width:300px;" >SKILLS</li>
+      	<li v-on:click="set_tab(4)"style="margin-left:150px;width:350px;">EXPERIENCES</li>
+  	<li v-on:click="set_tab(5)" style="margin-left:75px;width:300px;">PROJECTS</li>
+  	<li v-on:click="set_tab(6)">CONTACT</li>
       </ul>
     </div>
-    <div id="about">	
+    <div id="about" v-cloak v-show="tab==2">	
       <h2>ABOUT ME</h2>
       <hr>
-      <p>hi folks, this is typing animation using CSS</p>
-      <p>created with ♥ by 
-      <a href="https://twitter.com/@samarkandiy" title="Azik Samarkandiy">@samarkandiy</a> 
-      :)<span>|</span></p> 
+      <p class="desc">Hi, I'm Wenjun Mao. A front-end developer from Nanjing, China.</p>
+      <p class="desc2">I enjoy turning creative ideas and designs into reality. <span>|</span></p> 
+      <p class="back" v-on:click="prev_tab()">< Back</p>
     </div>
   </div>
 <script src="js/vue.js"></script>
