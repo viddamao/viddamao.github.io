@@ -28,10 +28,7 @@ gulp.task('sass', function() {
 // Concatenate & Minify JS
 gulp.task('scripts', function() {
     return gulp.src('js/*.js')
-        .pipe(concat('all.js'))
-        .pipe(gulp.dest('dist'))
-        .pipe(rename('all.min.js'))
-        .pipe(uglify())
+    
         .pipe(gulp.dest('js'))
         .pipe(livereload({ start: true,reloadPage   :"index.html" }));
 });
@@ -41,6 +38,9 @@ gulp.task('watch', function() {
     livereload.listen();
     //gulp.watch('js/*.js', ['lint', 'scripts']);
     gulp.watch('scss/*.scss', ['sass']);
+    gulp.watch('scss/modules/*.scss', ['sass']);
+    gulp.watch('scss/pages/*.scss', ['sass']);
+    gulp.watch('scss/mobile/*.scss', ['sass']);
 });
 
 // Default Task

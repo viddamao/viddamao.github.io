@@ -1,0 +1,35 @@
+ polygon {
+    fill: #42b983;
+    opacity: .75;
+}
+
+circle {
+    fill: transparent;
+    stroke: #999;
+}
+
+ #skills{
+	background-color:  white;
+	width:80%;
+	opacity: 0.5;
+	color:black; 
+	height:500px;
+	margin:15% auto 100px;
+	padding: 5px 40px ;
+	h2{
+	padding-top: 20px;
+	width:500px;
+	font-size: 35px;
+	}
+	.graph{
+	width: 500px;
+	margin-left: 20%;
+	}
+	.back{
+	float: left;
+	font-size:30px;
+	cursor:pointer;
+	margin-top: 350px;
+	}
+
+}

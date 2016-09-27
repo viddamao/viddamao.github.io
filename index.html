@@ -1,39 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-  <link rel="icon" href="/favicon.ico" type="image/x-icon">
-  <title>Wenjun Mao online Portfolio</title>
-  <link rel="stylesheet" href="css/index.css">
-  <style> [v-cloak] { display: none; } </style>
-</head>
-<body oncontextmenu="return false;">
-  <div id="main_wrapper">
-    <div id="intro" v-cloak v-show="tab==1">
-      <div>
-        <h1>{{name}}</h1>
-        <img src="./assets/photo.jpg" class="profile_pic" alt="">
-        <hr>
-      </div>
-      <ul class="nav_bar">
-      	<li id="nav1" v-on:click="set_tab(1)" style="display: none;"><span>[ </span>HOME<span> ]</span></li>
-      	<li id="nav2" v-on:click="set_tab(2)"><span>[ </span>ABOUT<span> ]</span></li>
-      	<li id="nav3" v-on:click="set_tab(3)"><span>[ </span>SKILLS<span> ]</span></li>
-      	<li id="nav4" v-on:click="set_tab(4)"><span>[ </span>EXPERIENCES<span> ]</span></li>
-  	<li id="nav5" v-on:click="set_tab(5)"><span>[ </span>PROJECTS<span> ]</span></li>
-  	<li id="nav6" v-on:click="set_tab(6)"><span>[ </span>CONTACT<span> ]</span></li>
-      </ul>
-    </div>
-    <div id="about" v-cloak v-show="tab==2">	
-      <h2>ABOUT ME</h2>
-      <hr>
-      <p class="desc">Hi, I'm Wenjun Mao. A front-end developer from Nanjing, China.</p>
-      <p class="desc2">I enjoy turning creative ideas and designs into reality. <span>|</span></p> 
-      <p class="back" v-on:click="prev_tab()">< Back</p>
-    </div>
-  </div>
-<script src="js/vue.js"></script>
- <script src="js/index.js"></script>
-</body>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1.0,user-scalable=no">
+		<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+		<link rel="icon" href="/favicon.ico" type="image/x-icon">
+		<title>Wenjun Mao online Portfolio</title>
+		<link rel="stylesheet" href="css/main.css">
+		<style> [v-cloak] { display: none; } </style>
+	</head>
+	<body oncontextmenu="return false;">
+		<div id="main_wrapper">
+			<div id="intro" v-cloak v-show="tab==1">
+				<div>
+					<h1>{{name}}</h1>
+					<img src="./assets/photo.jpg" class="profile_pic" alt="">
+					<hr>
+				</div>
+				<ul class="nav_bar">
+					<li id="nav1" v-on:click="set_tab(1)" style="display: none;"><span>[ </span>HOME<span> ]</span></li>
+					<li id="nav2" v-on:click="set_tab(2)"><span>[ </span>ABOUT<span> ]</span></li>
+					<li id="nav3" v-on:click="set_tab(3)"><span>[ </span>SKILLS<span> ]</span></li>
+					<li id="nav4" v-on:click="set_tab(4)"><span>[ </span>EXPERIENCES<span> ]</span></li>
+					<li id="nav5" v-on:click="set_tab(5)"><span>[ </span>PROJECTS<span> ]</span></li>
+					<li id="nav6" v-on:click="set_tab(6)"><span>[ </span>CONTACT<span> ]</span></li>
+				</ul>
+			</div>
+			<div id="about" v-cloak v-show="tab==2">
+				<h2>ABOUT ME</h2>
+				<hr>
+				<p class="desc">Hi, I'm Wenjun Mao. A front-end developer from Nanjing, China.</p>
+				<p class="desc2">I enjoy turning creative ideas and designs into reality. <span>|</span></p>
+				<p class="back" v-on:click="set_tab(1)">< Back</p>
+			</div>
+			<div id="skills" v-cloak v-show="tab==3">
+				<h2>SKILLS</h2>
+				<svg width="400" height="400" class="graph"><g>
+				<polygon :points="points"></polygon>
+				<circle cx="200" cy="200" r="160" stroke-width="2" ></circle>
+				<circle cx="200" cy="200" r="120"stroke-width="2" ></circle>
+				<circle cx="200" cy="200" r="80"stroke-width="2" ></circle>
+				<circle cx="200" cy="200" r="40"stroke-width="2" ></circle>
+				<line x1="200" y1="200" x2="60" y2="120" stroke-width="2" stroke="black"/>
+				<line x1="200" y1="200" x2="200" y2="40" stroke-width="2" stroke="black"/>
+				<line x1="200" y1="200" x2="340" y2="120" stroke-width="2" stroke="black"/>	
+				<line x1="200" y1="200" x2="340" y2="280" stroke-width="2" stroke="black"/>		
+				<line x1="200" y1="200" x2="200" y2="360" stroke-width="2" stroke="black"/>		
+				<line x1="200" y1="200" x2="60" y2="280" stroke-width="2" stroke="black"/>
+				<axis-label v-for="stat in stats"
+      					:stat="stat"
+      					:index="$index"
+    			 	 	:total="stats.length"></axis-label>
+				</g>
+				</svg>
+				<p class="back" v-on:click="set_tab(1)">< Back</p>
+			</div>
+		</div>
+		<script src="js/vue.js"></script>
+		<script src="js/index.js"></script>
+	</body>
 </html>
