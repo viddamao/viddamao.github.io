@@ -18,7 +18,7 @@ var vm = new Vue({
     el: '#main_wrapper',
     data: {
         name: "Wenjun Mao",
-        tab: 4,
+        tab: 1,
         stats: [{
             label: 'HTML',
             value: 100
@@ -48,6 +48,10 @@ var vm = new Vue({
         },
         set_tab: function(tab_id) {
             vm.$set("tab", tab_id);
+        },
+        down_link:function(link){
+             var newTab=window.open('about:blank');
+             newTab.location.href=link;
         }
     },
     computed: {

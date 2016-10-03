@@ -75,6 +75,16 @@ hr {
     width: 600px;
     margin: 8% 0 50px 0;
     float: left; }
+  #intro .download {
+    float: left;
+    text-decoration: none;
+    border: solid white 1px;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    font-size: 30px;
+    padding: 10px;
+    margin: -50px 0 20px; }
   #intro .profile_pic {
     width: 200px;
     height: 200px;
@@ -221,19 +231,62 @@ circle {
     #skills .back {
       margin-top: 0px; } }
 
+::-webkit-scrollbar {
+  width: 0px;
+  /* remove scrollbar space */
+  background: transparent;
+  /* optional: just make scrollbar invisible */ }
+
 #experiences {
   background-color: white;
   width: 80%;
   opacity: 0.5;
   color: black;
-  height: 500px;
-  margin: 15% auto 100px;
-  padding: 5px 40px;
-  cursor: e-resize; }
+  height: 550px;
+  margin: 10% auto 100px;
+  padding: 5px 40px 30px; }
   #experiences h2 {
     padding-top: 20px;
     width: 500px;
     font-size: 35px; }
+  #experiences .timeline {
+    margin: 20px auto;
+    cursor: n-resize;
+    width: 90%;
+    height: 400px;
+    background-color: black;
+    overflow: scroll;
+    overflow-x: hidden;
+    padding-top: 30px; }
+    #experiences .timeline #timeline_bar {
+      float: left;
+      list-style: none;
+      position: relative;
+      left: 50%;
+      width: 10px;
+      height: 1300px;
+      margin-top: 50px;
+      margin-bottom: 50px;
+      background-color: white;
+      border-radius: 10px; }
+    #experiences .timeline li {
+      position: relative;
+      margin-top: 60px;
+      margin-bottom: 20px;
+      padding: 30px 15px 40px;
+      width: 40%;
+      background-color: white;
+      box-sizing: border-box;
+      border-radius: 10px;
+      list-style-type: none;
+      color: black;
+      font-size: 20px; }
+    #experiences .timeline li:nth-child(odd) {
+      left: 5%; }
+    #experiences .timeline li:nth-child(even) {
+      left: 55%; }
+    #experiences .timeline span {
+      font-size: 15px; }
   #experiences .back {
     float: left;
     font-size: 30px;

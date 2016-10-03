@@ -15,6 +15,9 @@
 				<div>
 					<h1>{{name}}</h1>
 					<img src="./assets/photo.jpg" class="profile_pic" alt="">
+					<a href="http://7xscdo.com1.z0.glb.clouddn.com/Resume.pdf" download
+					class="download">
+					Download Resume</a>
 					<hr>
 				</div>
 				<ul class="nav_bar">
@@ -61,8 +64,36 @@
 			</div>
 			<div id="experiences" v-cloak v-show="tab==4">
 				<h2>EXPERIENCE</h2>
-				<div>
-				lalala
+				<div class="timeline">
+				<div id="timeline_bar"></div>
+				<li>REDLINE Inc. <br> 
+				FEB 2016 - AUG 2016<br>
+				Leading Front-end developer<br><br>
+				<span>&bull;&nbsp;Lead the front-end team for developing the website www.manfenjie.com and its mobile compatible version, which consists of functions including discussions, online chatting, live course streaming etc.</span><br>
+				<span>&bull;&nbsp;Constructed mainly using Vue.js (MVVM framework), LESS, etc.</span><br>
+				<span>&bull;&nbsp;Developed the Android mobile app with React Native</span>
+				</li>
+
+				<li>START-UP PROJECT<br>
+				JAN 2016 - MAR 2016<br>
+				Leading software developer<br><br>
+				<span>&bull;&nbsp;Designed and coded a Hedge Fund Analysis Website, a start up project that enables articles and fund data display, and filtering</span><br>
+				<span>&bull;&nbsp;Developed using Vue.js, setup server and database with Node.JS/ mongoDB , url:www.caifuup.com</span><br>
+				</li>
+
+				<li>ASIAINFO LINKAGE<br>
+				JUN 2013-DEC 2013<br>
+				Leading software developer<br><br>
+				<span>&bull;&nbsp;As Front-end developer, developed the Electronic Program Guides for China TELECOM, a system used in 2 provinces of China by millions of users, major roles in group are coding HTML pages and feature testing </span>
+				</li>
+
+				<li>FREELANCE PROJECT<br>
+				SEPT 2016 - NOW<br>
+				Leading software developer<br><br>
+				<span>&bull;&nbsp;Analyze the user needs, designed and coded the board game which originally designed by MIT.</span><br>
+				<span>&bull;&nbsp;Constructed mainly using React, Redux etc.</span><br>
+				<span>&bull;&nbsp;Designed and developed with mobile compatibility</span>
+				</li>
 				</div>
 				<p class="back" v-on:click="set_tab(1)">< Back</p>
 			</div>		
