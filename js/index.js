@@ -8,16 +8,17 @@ function valueToPoint(value, index, total) {
     var tx = x * cos - y * sin + 100
     var ty = x * sin + y * cos + 100
     return {
-        x: tx,
+        x: tx+50,
         y: ty
     }
 }
+
 
 var vm = new Vue({
     el: '#main_wrapper',
     data: {
         name: "Wenjun Mao",
-        tab: 1,
+        tab: 4,
         stats: [{
             label: 'HTML',
             value: 100

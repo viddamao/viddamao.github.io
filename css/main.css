@@ -188,6 +188,9 @@ polygon {
   fill: #42b983;
   opacity: .75; }
 
+polygon:hover {
+  opacity: 1; }
+
 circle {
   fill: transparent;
   stroke: #999; }
@@ -205,18 +208,78 @@ circle {
     width: 500px;
     font-size: 35px; }
   #skills .graph {
-    width: 500px;
+    width: 600px;
     margin-left: 20%; }
   #skills .back {
     float: left;
     font-size: 30px;
-    cursor: pointer;
-    margin-top: 350px; }
+    cursor: pointer; }
   @media screen and (max-width: 600px) {
     #skills .graph {
-      width: 500px;
+      width: 600px;
       margin-left: 0; }
     #skills .back {
+      margin-top: 0px; } }
+
+#experiences {
+  background-color: white;
+  width: 80%;
+  opacity: 0.5;
+  color: black;
+  height: 500px;
+  margin: 15% auto 100px;
+  padding: 5px 40px;
+  cursor: e-resize; }
+  #experiences h2 {
+    padding-top: 20px;
+    width: 500px;
+    font-size: 35px; }
+  #experiences .back {
+    float: left;
+    font-size: 30px;
+    cursor: pointer; }
+  @media screen and (max-width: 600px) {
+    #experiences .back {
+      margin-top: 0px; } }
+
+#projects {
+  background-color: white;
+  width: 80%;
+  opacity: 0.5;
+  color: black;
+  height: 500px;
+  margin: 15% auto 100px;
+  padding: 5px 40px; }
+  #projects h2 {
+    padding-top: 20px;
+    width: 500px;
+    font-size: 35px; }
+  #projects .back {
+    float: left;
+    font-size: 30px;
+    cursor: pointer; }
+  @media screen and (max-width: 600px) {
+    #projects .back {
+      margin-top: 0px; } }
+
+#contact {
+  background-color: white;
+  width: 80%;
+  opacity: 0.5;
+  color: black;
+  height: 500px;
+  margin: 15% auto 100px;
+  padding: 5px 40px; }
+  #contact h2 {
+    padding-top: 20px;
+    width: 500px;
+    font-size: 35px; }
+  #contact .back {
+    float: left;
+    font-size: 30px;
+    cursor: pointer; }
+  @media screen and (max-width: 600px) {
+    #contact .back {
       margin-top: 0px; } }
 
 @media screen and (max-width: 600px) {

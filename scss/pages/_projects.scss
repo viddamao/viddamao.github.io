@@ -1,16 +1,4 @@
- polygon {
-    fill: #42b983;
-    opacity: .75;
-}
-polygon:hover{
-    opacity: 1;
-}
-circle {
-    fill: transparent;
-    stroke: #999;
-}
-
- #skills{
+ #projects{
 	background-color:  white;
 	width:80%;
 	opacity: 0.5;
@@ -23,20 +11,13 @@ circle {
 	width:500px;
 	font-size: 35px;
 	}
-	.graph{
-	width: 600px;
-	margin-left: 20%;
-	}
-	.back{
+	.back{ 
 	float: left;
 	font-size:30px;
 	cursor:pointer;
 	}
 	@media screen and (max-width: 600px) {
-	.graph{
-	width: 600px;
-	margin-left: 0;
-	}
+
 	.back{
 	margin-top: 0px;
 	}
