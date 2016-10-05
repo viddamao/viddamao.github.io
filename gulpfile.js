@@ -1,5 +1,7 @@
 // Include gulp
 var gulp = require('gulp');
+var browserSync = require('browser-sync').create();
+var reload      = browserSync.reload;
 
 // Include Our Plugins
 var jshint = require('gulp-jshint');
@@ -22,20 +24,27 @@ gulp.task('sass', function() {
     return gulp.src('scss/*.scss')
         .pipe(sass())
         .pipe(gulp.dest('css'))
-        .pipe(livereload({ start: true,reloadPage   :"index.html"  }));
+        .pipe(livereload());
 });
 
 // Concatenate & Minify JS
 gulp.task('scripts', function() {
     return gulp.src('js/*.js')
-    
         .pipe(gulp.dest('js'))
-        .pipe(livereload({ start: true,reloadPage   :"index.html" }));
+        .pipe(livereload());
 });
+
 
 // Watch Files For Changes
 gulp.task('watch', function() {
+      browserSync.init({
+        server: {
+            baseDir: "./"
+        }
+    });
+
     livereload.listen();
+    gulp.watch('index.html').on("change", reload);;
     //gulp.watch('js/*.js', ['lint', 'scripts']);
     gulp.watch('scss/*.scss', ['sass']);
     gulp.watch('scss/modules/*.scss', ['sass']);

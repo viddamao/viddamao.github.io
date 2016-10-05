@@ -18,7 +18,7 @@ var vm = new Vue({
     el: '#main_wrapper',
     data: {
         name: "Wenjun Mao",
-        tab: 1,
+        tab: 6,
         stats: [{
             label: 'HTML',
             value: 100

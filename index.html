@@ -32,8 +32,10 @@
 			<div id="about" v-cloak v-show="tab==2">
 				<h2>ABOUT ME</h2>
 				<hr>
+				<div class="typewriter">
 				<p class="desc">Hi, I'm Wenjun Mao. A front-end developer from Nanjing, China.</p>
 				<p class="desc2">I enjoy turning creative ideas and designs into reality. <span>|</span></p>
+				</div>
 				<p class="back" v-on:click="set_tab(1)">< Back</p>
 			</div>
 			<div id="skills" v-cloak v-show="tab==3">
@@ -101,7 +103,7 @@
 			<div id="projects" v-cloak v-show="tab==5">
 				<h2>PROJECTS</h2>
 				<div>
-				lalala
+				Test
 				</div>
 				<p class="back" v-on:click="set_tab(1)">< Back</p>
 			</div>
@@ -109,7 +111,11 @@
 			<div id="contact" v-cloak v-show="tab==6">
 				<h2>CONTACT ME</h2>
 				<div>
-				lalala
+				<form action="http://formspree.io/viddamaowj@hotmail.com" method="POST">
+					<input type="email" name="Email address">
+					<textarea name="Content"></textarea>
+					<input type="submit" value="Send">
+				</form>
 				</div>
 				<p class="back" v-on:click="set_tab(1)">< Back</p>
 			</div>

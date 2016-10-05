@@ -157,6 +157,11 @@ hr {
     background-color: black;
     margin-top: 20px;
     height: 5px; }
+  #about .typewriter {
+    opacity: 1;
+    background-color: black;
+    color: white;
+    padding: 10px 20px 60px; }
   #about .desc, #about .desc2 {
     font-size: 30px;
     white-space: nowrap;
@@ -192,7 +197,7 @@ hr {
     float: left;
     font-size: 30px;
     cursor: pointer;
-    margin-top: 130px; }
+    margin-top: 30px; }
 
 polygon {
   fill: #42b983;
