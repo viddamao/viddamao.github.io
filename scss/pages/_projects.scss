@@ -1,10 +1,9 @@
  #projects{
-	background-color:  white;
+	background-color:  rgba(255,255,255,0.5);
 	width:80%;
-	opacity: 0.5;
 	color:black; 
-	height:500px;
-	margin:15% auto 100px;
+	height:600px;
+	margin:10% auto 100px;
 	padding: 5px 40px ;
 	h2{
 	padding-top: 20px;
@@ -15,6 +14,12 @@
 	float: left;
 	font-size:30px;
 	cursor:pointer;
+	margin-top: 30px;
+	}
+	.project_img{
+	width:320px;
+	height:180px;
+	margin:20px;
 	}
 	@media screen and (max-width: 600px) {
 

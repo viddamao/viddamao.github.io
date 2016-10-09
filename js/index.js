@@ -18,7 +18,7 @@ var vm = new Vue({
     el: '#main_wrapper',
     data: {
         name: "Wenjun Mao",
-        tab: 6,
+        tab: 5,
         content: "",
         email_focus: true,
         content_focus: false,
