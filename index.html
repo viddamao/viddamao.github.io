@@ -110,14 +110,44 @@
 
 			<div id="contact" v-cloak v-show="tab==6">
 				<h2>CONTACT ME</h2>
-				<div>
 				<form action="http://formspree.io/viddamaowj@hotmail.com" method="POST">
-					<input type="email" name="Email address">
-					<textarea name="Content"></textarea>
-					<input type="submit" value="Send">
+					<table>
+					<tr>	
+					<td style="width:30%">
+					<label for="Email address">Email address</label>
+					</td>
+					<td class="underline" 
+					v-bind:class="{bl:email_focus}">
+					<input type="email" id="contact_email" name="Email address" autofocus
+					style="resize: none;border:none;" onfocus="set_focus('email')"
+					onblur="set_blur('email')">
+					</td>
+					</tr>
+					<tr>
+					<td>
+					<label for="Content">Content</label>
+					</td>
+					<td class="underline" v-bind:class="{error:content_length_exceeded,bl:content_focus}">
+					<textarea v-model="content" id="contact_content" 
+					style="resize: none;border:none;" wrap="irtual" 
+					class="report_msg" name="Content" rows="10" cols="50" placeholder="Write your message in this box" onfocus="set_focus('content')"maxlength="201"
+					onblur="set_blur('content')"></textarea>
+					</td>
+					</tr>
+					<tr>
+					<td>
+					<p class="back" v-on:click="set_tab(1)">< Back</p>
+					</td>
+					<td>
+
+					<div id="word_count" v-bind:class="{rd:content_length_exceeded}">{{content.length}} / 200</div>
+					<br>
+					<input type="submit" class="submit_btn" value="Send">
+					</td>
+					</tr>
+					</table>
 				</form>
-				</div>
-				<p class="back" v-on:click="set_tab(1)">< Back</p>
+				
 			</div>
 		</div>
 		<script src="js/vue.js"></script>

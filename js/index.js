@@ -8,7 +8,7 @@ function valueToPoint(value, index, total) {
     var tx = x * cos - y * sin + 100
     var ty = x * sin + y * cos + 100
     return {
-        x: tx+50,
+        x: tx + 50,
         y: ty
     }
 }
@@ -18,7 +18,10 @@ var vm = new Vue({
     el: '#main_wrapper',
     data: {
         name: "Wenjun Mao",
-        tab: 1, 
+        tab: 6,
+        content: "",
+        email_focus: true,
+        content_focus: false,
         stats: [{
             label: 'HTML',
             value: 100
@@ -49,9 +52,9 @@ var vm = new Vue({
         set_tab: function(tab_id) {
             vm.$set("tab", tab_id);
         },
-        down_link:function(link){
-             var newTab=window.open('about:blank');
-             newTab.location.href=link;
+        down_link: function(link) {
+            var newTab = window.open('about:blank');
+            newTab.location.href = link;
         }
     },
     computed: {
@@ -60,7 +63,7 @@ var vm = new Vue({
             var total = 6
             return this.stats.map(function(stat, i) {
                 var point = valueToPoint(stat.value, i, total)
-                return point.x * 2+ ',' + point.y * 2
+                return point.x * 2 + ',' + point.y * 2
             }).join(' ')
         },
         point: function() {
@@ -68,6 +71,27 @@ var vm = new Vue({
                 this.index,
                 this.total
             )
+        },
+        content_length_exceeded:function(){
+            return this.content.length>200;
         }
     }
 })
+
+function set_focus(element_id) {
+    if (element_id == 'email') {
+        vm.$set('email_focus', true);
+        vm.$set('content_focus', false);
+    } else {
+        vm.$set('content_focus', true);
+        vm.$set('email_focus', false);
+    }
+}
+
+function set_blur(element_id) {
+    if (element_id == 'email') {
+        vm.$set('email_focus', false);
+    } else {
+        vm.$set('content_focus', false);
+    }
+}
