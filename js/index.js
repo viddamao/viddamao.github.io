@@ -54,7 +54,8 @@ var vm = new Vue({
         },
         down_link: function(link) {
             var newTab = window.open('about:blank');
-            newTab.location.href = link;
+            newTab.location.replace(link);
+            // newTab.location.href = link;
         }
     },
     computed: {
