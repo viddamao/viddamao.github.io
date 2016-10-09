@@ -320,7 +320,6 @@ circle {
     width: 320px;
     height: 180px;
     margin: 20px;
-    cursor: pointer;
     transition: all .2s ease-in-out; }
   #projects .project_img:hover {
     transform: scale(2); }
