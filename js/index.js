@@ -58,13 +58,13 @@ var vm = new Vue({
     },
     methods: {
         prev_tab: function() {
-            Vue.set(vm, this.tab, this.tab - 1);
+            Vue.set(vm,'tab', vm.tab - 1);
         },
         next_tab: function() {
-            Vue.set(vm, this.tab, this.tab + 1);
+            Vue.set(vm,'tab', vm.tab + 1);
         },
         set_tab: function(tab_id) {
-            Vue.set(vm, this.tab, tab_id);
+            Vue.set(vm,'tab', tab_id);
         },
         down_link: function(link) {
             var newTab = window.open('about:blank');
@@ -109,18 +109,18 @@ var vm = new Vue({
 
 function set_focus(element_id) {
     if (element_id == 'email') {
-        Vue.set(vm, email_focus, true);
-        Vue.set(vm, content_focus, false);
+        Vue.set(vm, "email_focus", true);
+        Vue.set(vm, "content_focus", false);
     } else {
-        Vue.set(vm, content_focus, true);
-        Vue.set(vm, email_focus, false);
+        Vue.set(vm, "content_focus", true);
+        Vue.set(vm, "email_focus", false);
     }
 }
 
 function set_blur(element_id) {
     if (element_id == 'email') {
-       Vue.set(vm,email_focus, false);
+       Vue.set(vm,"email_focus", false);
     } else {
-       Vue.set(vm,content_focus, false);
+       Vue.set(vm,"content_focus", false);
     }
 }
