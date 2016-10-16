@@ -2,6 +2,7 @@
 	background-color:  rgba(255,255,255,0.5);
 	width:80%;
 	color:black; 
+	overflow: hidden;
 	height:600px;
 	margin:10% auto 100px;
 	padding: 5px 40px ;
@@ -17,13 +18,39 @@
 	margin-top: 30px;
 	}
 	.project_img{
-	width:320px;
-	height:180px;
 	margin:20px;
 	transition: all .2s ease-in-out; 
 	}
-	.project_img:hover{
-	transform: scale(2); 
+	.con{
+		margin-top: 5%;
+		width: 6000px;
+		height: 300px;
+		overflow: hidden;
+		animation: move 15s linear infinite normal;
+		animation-fill-mode:forwards;
+		li{
+		float: left;
+		list-style: none;
+		overflow: hidden;
+		}
+
+		img{
+		float: left;
+		width: 500px;
+		height: 300px;
+		}
+		img:hover{
+		transform:scale(1.2);
+		}
+		
+	}
+	.con:hover{
+		animation-play-state:paused;
+		-webkit-animation-play-state:paused;
+		}
+	@keyframes move{
+		0%{transform:translateX(0px);}
+		100%{transform:translateX(-4300px);}
 	}
 	@media screen and (max-width: 600px) {
 
