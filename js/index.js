@@ -58,32 +58,32 @@ var vm = new Vue({
     },
     methods: {
         prev_tab: function() {
-            vm.$set(this.tab, this.tab - 1);
+            Vue.set(vm, this.tab, this.tab - 1);
         },
         next_tab: function() {
-            vm.$set(this.tab, this.tab + 1);
+            Vue.set(vm, this.tab, this.tab + 1);
         },
         set_tab: function(tab_id) {
-            vm.$set(this.tab, tab_id);
+            Vue.set(vm, this.tab, tab_id);
         },
         down_link: function(link) {
             var newTab = window.open('about:blank');
             newTab.location.replace(link);
             // newTab.location.href = link;
         },
-        mask:function(index){
-            for (var i=0;i<=12;i++){
-                if (i!=index){
-                    vm.$set(this.masks,i,false);
+        mask: function(index) {
+            for (var i = 0; i <= 12; i++) {
+                if (i != index) {
+                    vm.$set(this.masks, i, false);
                 }
             }
-            vm.$set(this.masks,index,true);
+            vm.$set(this.masks, index, true);
         },
-        unmask:function(){
-            for (var i=0;i<=12;i++){
-                vm.$set(this.masks,i,false);
+        unmask: function() {
+            for (var i = 0; i <= 12; i++) {
+                vm.$set(this.masks, i, false);
             }
-            
+
         }
     },
     computed: {
@@ -109,18 +109,18 @@ var vm = new Vue({
 
 function set_focus(element_id) {
     if (element_id == 'email') {
-        vm.$set(this.email_focus, true);
-        vm.$set(this.content_focus, false);
+        Vue.set(vm, email_focus, true);
+        Vue.set(vm, content_focus, false);
     } else {
-        vm.$set(this.content_focus, true);
-        vm.$set(this.email_focus, false);
+        Vue.set(vm, content_focus, true);
+        Vue.set(vm, email_focus, false);
     }
 }
 
 function set_blur(element_id) {
     if (element_id == 'email') {
-        vm.$set(this.email_focus, false);
+       Vue.set(vm,email_focus, false);
     } else {
-        vm.$set(this.content_focus, false);
+       Vue.set(vm,content_focus, false);
     }
 }
