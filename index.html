@@ -102,19 +102,17 @@
 
 			<div id="projects" v-cloak v-show="tab==5">
 				<h2>PROJECTS</h2>
-
-				<div>
-				<ul class="con">
-				<li v-for="img_src in images" track-by="$index">
-				<img v-bind:src="img_src" alt="#" class="project_img">
-<!--				 <div class="mask">  
-   				  <a href="#" class="info" title="Full Image">Full Image</a>  
-  				 </div> --> 
+				<ul class="con"
+				 >
+				<li v-for="(img_src,index) in images">
+				<img v-bind:src="img_src" alt="#" class="project_img" v-if="!masks[index]" 
+				v-on:mouseover="mask(index)">
+				 <div class="mask" v-if="masks[index]" v-on:mouseout.self="unmask()">  
+   				  <a href="#" class="info" v-text="titles[index]"></a>  
+  				 </div>  
   				</li>
 				</ul>
 				
-				
-				</div>
 				<p class="back" v-on:click="set_tab(1)">< Back</p>
 			</div>
 

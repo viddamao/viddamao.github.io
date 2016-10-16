@@ -52,7 +52,9 @@ var vm = new Vue({
         }, {
             label: 'Node.js',
             value: 80
-        }]
+        }],
+        masks: [false, false, false, false, false, false, false, false, false, false, false],
+        titles: ["Manfenjie", "Caifuup", "Raytracer", "Cellsociety", "EPG", "FPS Game", "Beer Game", "Slogo", "Manfenjie", "Caifuup", "Raytracer"]
     },
     methods: {
         prev_tab: function() {
@@ -68,6 +70,20 @@ var vm = new Vue({
             var newTab = window.open('about:blank');
             newTab.location.replace(link);
             // newTab.location.href = link;
+        },
+        mask:function(index){
+            for (var i=0;i<=12;i++){
+                if (i!=index){
+                    vm.$set(this.masks,i,false);
+                }
+            }
+            vm.$set(this.masks,index,true);
+        },
+        unmask:function(){
+            for (var i=0;i<=12;i++){
+                vm.$set(this.masks,i,false);
+            }
+            
         }
     },
     computed: {
@@ -80,7 +96,7 @@ var vm = new Vue({
             }).join(' ')
         },
         point: function() {
-            return valueToPoint(+this.stat.value + 10,
+            return valueToPoint(+this.stats.value + 10,
                 this.index,
                 this.total
             )
