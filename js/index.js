@@ -22,6 +22,18 @@ var vm = new Vue({
         content: "",
         email_focus: true,
         content_focus: false,
+        images: ["./assets/Mfj.gif",
+            "./assets/caifuup.gif",
+            "./assets/raytracer.gif",
+            "./assets/Cellsociety_1.gif",
+            "./assets/EPG.jpg",
+            "./assets/cs.gif",
+            "./assets/beergame.png",
+            "./assets/Slogo.gif",
+            "./assets/Mfj.gif",
+            "./assets/caifuup.gif",
+            "./assets/raytracer.gif"
+        ],
         stats: [{
             label: 'HTML',
             value: 100
@@ -73,8 +85,8 @@ var vm = new Vue({
                 this.total
             )
         },
-        content_length_exceeded:function(){
-            return this.content.length>200;
+        content_length_exceeded: function() {
+            return this.content.length > 200;
         }
     }
 })

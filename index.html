@@ -105,18 +105,12 @@
 
 				<div>
 				<ul class="con">
-				<li><img src="./assets/Mfj.gif" alt="#" class="project_img"></li>
-				<li><img src="./assets/caifuup.gif" alt="#" class="project_img"></li>
-				<li><img src="./assets/raytracer.gif" alt="#" class="project_img"></li>
-				<li><img src="./assets/Cellsociety_1.gif" alt="#" class="project_img"></li>
-				<li><img src="./assets/EPG.jpg" alt="#" class="project_img"></li>
-				<li><img src="./assets/cs.gif" alt="#" class="project_img"></li>
-				<li><img src="./assets/beergame.png" alt="#" class="project_img"></li>
-				<li><img src="./assets/Slogo.gif" alt="#" class="project_img"></li>
-				
-				<li><img src="./assets/Mfj.gif" alt="#" class="project_img"></li>
-				<li><img src="./assets/caifuup.gif" alt="#" class="project_img"></li>
-				<li><img src="./assets/raytracer.gif" alt="#" class="project_img"></li>
+				<li v-for="img_src in images" track-by="$index">
+				<img v-bind:src="img_src" alt="#" class="project_img">
+<!--				 <div class="mask">  
+   				  <a href="#" class="info" title="Full Image">Full Image</a>  
+  				 </div> --> 
+  				</li>
 				</ul>
 				
 				

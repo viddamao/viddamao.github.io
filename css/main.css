@@ -320,6 +320,9 @@ circle {
   #projects .project_img {
     margin: 20px;
     transition: all .2s ease-in-out; }
+  #projects .con:hover {
+    animation-play-state: paused;
+    -webkit-animation-play-state: paused; }
   #projects .con {
     margin-top: 5%;
     width: 6000px;
@@ -335,11 +338,25 @@ circle {
       float: left;
       width: 500px;
       height: 300px; }
-    #projects .con img:hover {
-      transform: scale(1.2); }
-  #projects .con:hover {
-    animation-play-state: paused;
-    -webkit-animation-play-state: paused; }
+    #projects .con .mask {
+      width: 500px;
+      height: 300px;
+      opacity: 0;
+      overflow: visible;
+      border: 100px solid black;
+      background-color: black;
+      box-sizing: border-box;
+      z-index: 233; }
+    #projects .con a.info {
+      position: relative;
+      top: -10px;
+      /* Center the link */
+      opacity: 0; }
+    #projects .con .mask:hover {
+      opacity: 1;
+      border: 100px solid rgba(0, 0, 0, 0.7); }
+    #projects .con .mask:hover a.info {
+      opacity: 1; }
 
 @keyframes move {
   0% {

@@ -21,6 +21,11 @@
 	margin:20px;
 	transition: all .2s ease-in-out; 
 	}
+
+	.con:hover{
+		animation-play-state:paused;
+		-webkit-animation-play-state:paused;
+	}
 	.con{
 		margin-top: 5%;
 		width: 6000px;
@@ -39,15 +44,34 @@
 		width: 500px;
 		height: 300px;
 		}
-		img:hover{
-		transform:scale(1.2);
+		.mask {
+		   width: 500px;
+		   height: 300px;
+		   opacity: 0;
+		   overflow:visible;
+		   border:100px solid black;
+		   background-color: black;
+		   box-sizing:border-box;
+		   z-index:233;
+		}
+		
+		a.info {
+		   position:relative;
+		   top:-10px; /* Center the link */
+		   opacity: 0;
+		}
+		
+		.mask:hover {
+		   opacity: 1;
+		   border:100px solid rgba(0,0,0,0.7);
+		}
+		
+		.mask:hover a.info {
+		   opacity:1;
 		}
 		
 	}
-	.con:hover{
-		animation-play-state:paused;
-		-webkit-animation-play-state:paused;
-		}
+
 	@keyframes move{
 		0%{transform:translateX(0px);}
 		100%{transform:translateX(-4300px);}
