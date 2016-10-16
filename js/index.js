@@ -58,13 +58,13 @@ var vm = new Vue({
     },
     methods: {
         prev_tab: function() {
-            vm.$set("tab", this.tab - 1);
+            vm.$set(this.tab, this.tab - 1);
         },
         next_tab: function() {
-            vm.$set("tab", this.tab + 1);
+            vm.$set(this.tab, this.tab + 1);
         },
         set_tab: function(tab_id) {
-            vm.$set("tab", tab_id);
+            vm.$set(this.tab, tab_id);
         },
         down_link: function(link) {
             var newTab = window.open('about:blank');
@@ -109,18 +109,18 @@ var vm = new Vue({
 
 function set_focus(element_id) {
     if (element_id == 'email') {
-        vm.$set('email_focus', true);
-        vm.$set('content_focus', false);
+        vm.$set(this.email_focus, true);
+        vm.$set(this.content_focus, false);
     } else {
-        vm.$set('content_focus', true);
-        vm.$set('email_focus', false);
+        vm.$set(this.content_focus, true);
+        vm.$set(this.email_focus, false);
     }
 }
 
 function set_blur(element_id) {
     if (element_id == 'email') {
-        vm.$set('email_focus', false);
+        vm.$set(this.email_focus, false);
     } else {
-        vm.$set('content_focus', false);
+        vm.$set(this.content_focus, false);
     }
 }
