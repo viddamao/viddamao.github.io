@@ -44,8 +44,8 @@ var vm = new Vue({
             label: 'JavaScript',
             value: 80
         }, {
-            label: 'Smashing computer while debugging',
-            value: 110
+            label: 'jQuery',
+            value: 80
         }, {
             label: 'Vue.js',
             value: 80
