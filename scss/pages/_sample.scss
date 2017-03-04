@@ -1,0 +1,56 @@
+::-webkit-scrollbar {
+    width: 0px;  /* remove scrollbar space */
+    background: transparent;  /* optional: just make scrollbar invisible */
+}
+ #samples{
+	background-color:  white;
+	width:80%;
+	opacity: 0.5;
+	color:black; 
+	height:550px;
+	margin:10% auto 100px;
+	padding: 5px 40px 30px ;
+	h2{
+	padding-top: 20px;
+	width:500px;
+	font-size: 35px;
+	}
+	.list{	
+	margin:20px auto;
+	width:90%;
+	height:400px;
+	background-color: black;
+	overflow: scroll;
+    	overflow-x: hidden;
+    	padding-top: 30px;
+    		li{
+    		 padding:10px;
+    		 margin: 10px;
+		 position:relative;
+		 width:20%;
+		 background-color:white;
+		 box-sizing:border-box;
+		 border-radius:10px;
+		 font-size:20px;
+		 a{
+		 color:black;
+		 margin:0 auto;
+		 width:100%;
+		 text-align: center;
+		 cursor:pointer;
+		 text-decoration: none;
+		 }
+		}
+    	}
+	.back{ 
+	float: left;
+	font-size:30px;
+	cursor:pointer;
+	}
+	@media screen and (max-width: 600px) {
+
+	.back{
+	margin-top: 0px;
+	}
+	} 
+}
