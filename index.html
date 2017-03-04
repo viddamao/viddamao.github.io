@@ -21,14 +21,17 @@
 					<hr>
 				</div>
 				<ul class="nav_bar">
-					<li id="nav1" v-on:click="set_tab(1)" style="display: none;"><span>[ </span>HOME<span> ]</span></li>
-					<li id="nav2" v-on:click="set_tab(2)"><span>[ </span>ABOUT<span> ]</span></li>
-					<li id="nav3" v-on:click="set_tab(3)"><span>[ </span>SKILLS<span> ]</span></li>
-					<li id="nav4" v-on:click="set_tab(4)"><span>[ </span>EXPERIENCES<span> ]</span></li>
-					<li id="nav5" v-on:click="set_tab(5)"><span>[ </span>PROJECTS<span> ]</span></li>
-					<li id="nav6" v-on:click="set_tab(6)"><span>[ </span>CONTACT<span> ]</span></li>
+					<li id="nav1" v-on:click="set_tab(2)"><span>[ </span>ABOUT<span> ]</span></li>
+					<li id="nav2" v-on:click="set_tab(3)"><span>[ </span>SKILLS<span> ]</span></li>
+					<li id="nav3" v-on:click="set_tab(4)"><span>[ </span>EXPERIENCES<span> ]</span></li>
+					<li id="nav4" v-on:click="set_tab(5)"><span>[ </span>CODE SAMPLES<span> ]</span></li>
+					<li id="nav5" v-on:click="set_tab(6)"><span>[ </span>PROJECTS<span> ]</span></li>
+					<li id="nav6" v-on:click="set_tab(7)"><span>[ </span>CONTACT<span> ]</span></li>
 				</ul>
 			</div>
+
+
+			<!--self introduction page-->
 			<div id="about" v-cloak v-show="tab==2">
 				<h2>ABOUT ME</h2>
 				<hr>
@@ -38,6 +41,8 @@
 				</div>
 				<p class="back" v-on:click="set_tab(1)">< Back</p>
 			</div>
+
+			<!--skills page-->
 			<div id="skills" v-cloak v-show="tab==3">
 				<h2>SKILLS</h2>
 				<div>
@@ -46,8 +51,8 @@
 				<text x="260" y="30"  font-size="30">HTML</text>
 				<text x="443" y="120"  font-size="30">CSS</text>
 				<text x="443" y="300"  font-size="30">JavaScript</text>
-				<text x="40" y="120"  font-size="30">Vue.JS</text>
-				<text x="40" y="300"  font-size="30">NodeJS</text>
+				<text x="40" y="120"  font-size="30">Vue.js</text>
+				<text x="40" y="300"  font-size="30">Node.js</text>
 				<text x="260" y="390"  font-size="30">jQuery</text>
 				<circle cx="300" cy="200" r="160" stroke-width="2" ></circle>
 				<circle cx="300" cy="200" r="120"stroke-width="2" ></circle>
@@ -64,6 +69,8 @@
 				</div>
 				<p class="back" v-on:click="set_tab(1)">< Back</p>
 			</div>
+
+			<!--experience page-->
 			<div id="experiences" v-cloak v-show="tab==4">
 				<h2>EXPERIENCE</h2>
 				<div class="timeline">
@@ -98,9 +105,22 @@
 				</li>
 				</div>
 				<p class="back" v-on:click="set_tab(1)">< Back</p>
-			</div>		
+			</div>	
 
-			<div id="projects" v-cloak v-show="tab==5">
+			<!--code sample page-->	
+			<div id="samples" v-cloak v-show="tab==5">
+				<h2>CODE SAMPLES</h2>
+				
+				<ul class="list">
+				<li v-for="sample in samples">
+				<a :href="hprefix+sample.id" class="info" >{{sample.text}}</a>
+				</li>	
+				</ul>
+				<p class="back" v-on:click="set_tab(1)">< Back</p>
+			</div>
+
+			<!--project page-->	
+			<div id="projects" v-cloak v-show="tab==6">
 				<h2>PROJECTS</h2>
 				<ul class="con"
 				 >
@@ -114,9 +134,10 @@
 				</ul>
 				
 				<p class="back" v-on:click="set_tab(1)">< Back</p>
-			</div>
+			</div>						
 
-			<div id="contact" v-cloak v-show="tab==6">
+			<!--contact me page-->	
+			<div id="contact" v-cloak v-show="tab==7">
 				<h2>CONTACT ME</h2>
 				<form action="https://formspree.io/viddamaowj@hotmail.com" method="POST">
 					<table>

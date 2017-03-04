@@ -40,13 +40,16 @@ body{
 	@for $i from 1 through length($mgl) {
 	   #nav#{$i} {
 	       margin-left: nth($mgl, $i);
-	   } 
+	   }  
+	}
+	#nav1{
+	margin-top: 10%;
 	}
 	li:hover span{
 	display: inline;
 	}
 	.nav_bar{
-	margin-top: 3%;
+	padding-top: 5%;
 	}
 }
 #about{

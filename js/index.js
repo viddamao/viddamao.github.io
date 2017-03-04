@@ -22,6 +22,7 @@ var vm = new Vue({
         content: "",
         email_focus: true,
         content_focus: false,
+        hprefix:"https://viddamao.github.io/front-end-demo/",
         images: ["./assets/Mfj.gif",
             "./assets/caifuup.gif",
             "./assets/raytracer.gif",
@@ -33,6 +34,18 @@ var vm = new Vue({
             "./assets/Mfj.gif",
             "./assets/caifuup.gif",
             "./assets/raytracer.gif"
+        ],
+        samples: [{
+            text: "Control DIV Style",
+            id: "01"
+        },{
+            text: "Website Theme",
+            id: "02"
+        },
+        {
+            text: "Carousel Demo",
+            id: "03"
+        }
         ],
         stats: [{
             label: 'HTML',
@@ -58,13 +71,13 @@ var vm = new Vue({
     },
     methods: {
         prev_tab: function() {
-            Vue.set(vm,'tab', vm.tab - 1);
+            Vue.set(vm, 'tab', vm.tab - 1);
         },
         next_tab: function() {
-            Vue.set(vm,'tab', vm.tab + 1);
+            Vue.set(vm, 'tab', vm.tab + 1);
         },
         set_tab: function(tab_id) {
-            Vue.set(vm,'tab', tab_id);
+            Vue.set(vm, 'tab', tab_id);
         },
         down_link: function(link) {
             var newTab = window.open('about:blank');
@@ -119,8 +132,8 @@ function set_focus(element_id) {
 
 function set_blur(element_id) {
     if (element_id == 'email') {
-       Vue.set(vm,"email_focus", false);
+        Vue.set(vm, "email_focus", false);
     } else {
-       Vue.set(vm,"content_focus", false);
+        Vue.set(vm, "content_focus", false);
     }
 }
