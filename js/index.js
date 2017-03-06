@@ -1,16 +1,16 @@
 // math helper...
 function valueToPoint(value, index, total) {
-    var x = 0
-    var y = -value * 0.8
-    var angle = Math.PI * 2 / total * index
-    var cos = Math.cos(angle)
-    var sin = Math.sin(angle)
-    var tx = x * cos - y * sin + 100
-    var ty = x * sin + y * cos + 100
+    var x = 0;
+    var y = -value * 0.8;
+    var angle = Math.PI * 2 / total * index;
+    var cos = Math.cos(angle);
+    var sin = Math.sin(angle);
+    var tx = x * cos - y * sin + 100;
+    var ty = x * sin + y * cos + 100;
     return {
         x: tx + 50,
         y: ty
-    }
+    };
 }
 
 
@@ -22,7 +22,7 @@ var vm = new Vue({
         content: "",
         email_focus: true,
         content_focus: false,
-        hprefix:"https://viddamao.github.io/front-end-demo/",
+        hprefix: "https://viddamao.github.io/front-end-demo/",
         images: ["./assets/Mfj.gif",
             "./assets/caifuup.gif",
             "./assets/raytracer.gif",
@@ -38,15 +38,13 @@ var vm = new Vue({
         samples: [{
             text: "Control DIV Style",
             id: "01"
-        },{
+        }, {
             text: "Website Theme",
             id: "02"
-        },
-        {
+        }, {
             text: "Carousel Demo",
             id: "03"
-        }
-        ],
+        }],
         stats: [{
             label: 'HTML',
             value: 100
@@ -102,23 +100,23 @@ var vm = new Vue({
     computed: {
         // a computed property for the polygon's points
         points: function() {
-            var total = 6
+            var total = 6;
             return this.stats.map(function(stat, i) {
-                var point = valueToPoint(stat.value, i, total)
-                return point.x * 2 + ',' + point.y * 2
-            }).join(' ')
+                var point = valueToPoint(stat.value, i, total);
+                return point.x * 2 + ',' + point.y * 2;
+            }).join(' ');
         },
         point: function() {
             return valueToPoint(+this.stats.value + 10,
                 this.index,
                 this.total
-            )
+            );
         },
         content_length_exceeded: function() {
             return this.content.length > 200;
         }
     }
-})
+});
 
 function set_focus(element_id) {
     if (element_id == 'email') {
