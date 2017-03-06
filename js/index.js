@@ -22,7 +22,7 @@ var vm = new Vue({
         content: "",
         email_focus: true,
         content_focus: false,
-        hprefix:"https://viddamao.github.io/front-end-demo/",
+        hprefix: "https://viddamao.github.io/front-end-demo/",
         images: ["./assets/Mfj.gif",
             "./assets/caifuup.gif",
             "./assets/raytracer.gif",
@@ -38,15 +38,13 @@ var vm = new Vue({
         samples: [{
             text: "Control DIV Style",
             id: "01"
-        },{
+        }, {
             text: "Website Theme",
             id: "02"
-        },
-        {
+        }, {
             text: "Carousel Demo",
             id: "03"
-        }
-        ],
+        }],
         stats: [{
             label: 'HTML',
             value: 100
