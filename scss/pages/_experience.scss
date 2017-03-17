@@ -2,6 +2,8 @@
     width: 0px;  /* remove scrollbar space */
     background: transparent;  /* optional: just make scrollbar invisible */
 }
+
+@media screen and (min-width: 600px) {
  #experiences{
 	background-color:  white;
 	width:80%;
@@ -66,10 +68,35 @@
 	font-size:30px;
 	cursor:pointer;
 	}
-	@media screen and (max-width: 600px) {
+	}
+}
 
+@media screen and (max-width: 600px) {
+#experiences{
+	background-color:  white;
+	width:80%;
+	opacity: 0.5;
+	color:black; 
+	height:550px;
+	margin:10% auto 100px;
+	padding: 5px 40px 30px ;
+	h2{
+	padding-top: 10px;
+	width:400px;
+	font-size: 35px;
+	margin-bottom: 50px;
+	}
+	.timeline{	
+		li{
+		margin-top: 10px;
+		}
+		span{
+			display: none;
+		}
+	margin:20px auto;
+	}
 	.back{
 	margin-top: 0px;
 	}
-	} 
 }
+} 

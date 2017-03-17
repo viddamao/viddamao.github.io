@@ -24,19 +24,21 @@
 	padding:10px 20px 60px;
 
 	}
-	.desc, .desc2{
-	font-size:30px;
+	.desc, .desc2,.desc3{
 	white-space: nowrap;
 	overflow: hidden;
-	width: 40em;
-	margin-top: 20px;
-	line-height: 50px;
+	width: 30em;
+	margin-top: 1em;
+	line-height: 2em;
 	}
 	.desc{
-	animation: type 4s steps(50, end); 
+	animation: type 3s steps(50, end); 
 	}
 	.desc2{
-	animation: type2 8s steps(50, end);
+	animation: type2 6s steps(50, end);
+	}
+	.desc3{
+	animation: type2 12s steps(50, end);	
 	}
 	span{
 	animation: blink 1s infinite;
