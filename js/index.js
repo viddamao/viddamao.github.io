@@ -13,12 +13,17 @@ function valueToPoint(value, index, total) {
     };
 }
 
+//Extract url parameter
+urlParam = function(name) {
+    var result = (RegExp(name + '=' + '(.+?)(&|$)').exec(location.search) || [, null])[1];
+    return decodeURIComponent(result);
+}
 
 var vm = new Vue({
     el: '#main_wrapper',
     data: {
         name: "Wenjun Mao",
-        tab: 1,
+        tab: urlParam('tab') == "null" ? 1 : urlParam('tab'),
         content: "",
         email_focus: true,
         content_focus: false,

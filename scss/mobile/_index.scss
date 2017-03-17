@@ -6,8 +6,11 @@ body{
 	width:340px;
 	height: 600px;
 	margin: 0 auto; 
+	.download{
+	font-size: 0.5em;
+	}
 	h1{
-	font-size:2em;
+	font-size:1.2em;
 	width:200px;
 	margin: 31% 0 10px 0;
 	float: left;
@@ -17,9 +20,6 @@ body{
 	height:100px;
 	border-radius:100px; 
 	margin: 21% 0 10px 10px;
-	}
-	hr{
-	display: none;
 	}
 	li{
 	cursor: pointer;
@@ -36,7 +36,7 @@ body{
 		display: none;
 		}
 	} 
-	$mgl: 0, 0,50px,100px,150px,200px,250px;
+	$mgl: 0,40px,80px,120px,160px,200px;
 	@for $i from 1 through length($mgl) {
 	   #nav#{$i} {
 	       margin-left: nth($mgl, $i);
@@ -54,7 +54,7 @@ body{
 }
 #about{
 	background-color:  white;
-	width:70%;
+	width:90%;
 	opacity: 0.5;
 	color:black; 
 	height:400px;
@@ -71,23 +71,30 @@ body{
 	margin-top: 20px;
 	height:5px;
 	}
-	.desc, .desc2{
-	font-size:0.9em;
+	.desc, .desc2,.desc3{
 	white-space: nowrap;
 	overflow: hidden;
-	width: 40em;
+	width: 30em;
 	margin-top: 1em;
 	line-height: 2em;
 	}
 	.desc{
-	animation: type 4s steps(50, end); 
+	font-size: 0.3em;
+	animation: type 3s steps(50, end); 
 	}
 	.desc2{
-	animation: type2 8s steps(50, end);
+	font-size: 0.3em;
+	animation: type2 6s steps(50, end);
 	}
+	.desc3{
+	font-size: 0.3em;
+	animation: type2 12s steps(50, end);	
+	}
+
 	span{
-	animation: blink 1s infinite;
+	animation: blink 0.8s infinite;
 	}
+
 	@keyframes type{ 
 	  from { width: 0; } 
 	} 
@@ -97,7 +104,7 @@ body{
 	  40%{width: 0;}
 	  100%{ width: 100; } 
 	} 
-	
+
 	@keyframes blink{
 	  to{opacity: .0;}
 	}
