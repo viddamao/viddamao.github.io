@@ -44,6 +44,9 @@ var vm = new Vue({
         }, {
             text: "Carousel Demo",
             id: "03"
+        }, {
+            text: "Countdown Timer",
+            id: "04"
         }],
         stats: [{
             label: 'HTML',
