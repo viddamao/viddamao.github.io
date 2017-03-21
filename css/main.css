@@ -547,7 +547,7 @@ circle {
       padding-top: 5%; }
   #about {
     background-color: white;
-    width: 90%;
+    width: 80%;
     opacity: 0.5;
     color: black;
     height: 400px;
@@ -559,6 +559,7 @@ circle {
       font-size: 3em; }
     #about hr {
       border: 0;
+      width: 90%;
       background-color: black;
       margin-top: 20px;
       height: 5px; }
@@ -569,13 +570,10 @@ circle {
       margin-top: 1em;
       line-height: 2em; }
     #about .desc {
-      font-size: 0.3em;
       animation: type 3s steps(50, end); }
     #about .desc2 {
-      font-size: 0.3em;
       animation: type2 6s steps(50, end); }
     #about .desc3 {
-      font-size: 0.3em;
       animation: type2 12s steps(50, end); }
     #about span {
       animation: blink 0.8s infinite; }
@@ -598,4 +596,4 @@ circle {
       float: left;
       font-size: 2em;
       cursor: pointer;
-      margin-top: 130px; } }
+      margin-top: 50px; } }

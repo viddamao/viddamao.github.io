@@ -54,7 +54,7 @@ body{
 }
 #about{
 	background-color:  white;
-	width:90%;
+	width:80%;
 	opacity: 0.5;
 	color:black; 
 	height:400px;
@@ -67,6 +67,7 @@ body{
 	}
 	hr{
 	border: 0;
+	width: 90%;
 	background-color: black;
 	margin-top: 20px;
 	height:5px;
@@ -79,15 +80,12 @@ body{
 	line-height: 2em;
 	}
 	.desc{
-	font-size: 0.3em;
 	animation: type 3s steps(50, end); 
 	}
 	.desc2{
-	font-size: 0.3em;
 	animation: type2 6s steps(50, end);
 	}
 	.desc3{
-	font-size: 0.3em;
 	animation: type2 12s steps(50, end);	
 	}
 
@@ -116,8 +114,7 @@ body{
 	float: left;
 	font-size:2em;
 	cursor:pointer;
-	margin-top: 130px;
+	margin-top: 50px;
 	}
 }
- 
 }

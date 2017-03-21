@@ -52,6 +52,9 @@ var vm = new Vue({
         }, {
             text: "Countdown Timer",
             id: "04"
+        }, {
+            text: "Star Rating",
+            id: "05"
         }],
         stats: [{
             label: 'HTML',
