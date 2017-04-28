@@ -42,19 +42,22 @@ var vm = new Vue({
         ],
         samples: [{
             text: "Control DIV Style",
-            id: "01"
+            id: "01/"
         }, {
             text: "Website Theme",
-            id: "02"
+            id: "02/"
         }, {
             text: "Carousel Demo",
-            id: "03"
+            id: "03/"
         }, {
             text: "Countdown Timer",
-            id: "04"
+            id: "04/"
         }, {
             text: "Star Rating",
-            id: "05"
+            id: "05/"
+        },{
+            text: "Calculator",
+            id: "06/"
         }],
         stats: [{
             label: 'HTML',
