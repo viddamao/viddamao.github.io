@@ -55,7 +55,7 @@ var vm = new Vue({
         }, {
             text: "Star Rating",
             id: "05/"
-        },{
+        }, {
             text: "Calculator",
             id: "06/"
         }],
